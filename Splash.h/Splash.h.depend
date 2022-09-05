@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1662401540 source:d:\music management system\music-management-system-\splash.h\main.c
+	<stdio.h>
+	<stdlib.h>
+
