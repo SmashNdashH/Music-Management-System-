@@ -10,13 +10,12 @@ void login(void)
 		printf("\n                                                                                         ");
 		printf("\n\n\t\t\t\t\tPress any key to Continue...                                          ");
         printf("\n                                                                                  ");
-
+		getch();
 }
 
 void username_password(void){
 
 char user[50], pass[50];
-int checker = 0;
     printf("\n");
 	printf("\n");
 	printf("\n");
@@ -37,7 +36,7 @@ int checker = 0;
 	getchar();
 	system("cls");
 
-do {
+ {
             system("color 3F");
         printf("\n\n\t\t\t\t\tPlease enter your User ID: ");
         scanf("%s", &user);
@@ -46,25 +45,34 @@ do {
 
         if(strcmp(user, "Abrar")==0)
         {
-           if(strcmp(pass, "abrar66")==0){
+           if(strcmp(pass, "abrar66")==0)
+            {
             printf("\n\t\t\t\t\tYou are Logged in. ");
-            checker++;
             sleep(1);
            }
-           else
+           else{
             printf("\n\t\t\t\t\tThe User ID or Password maybe incorrect!");
+            printf("\n\t\t\t\t\tPlease Try Again!");
+
             sleep(1);
             system("cls");
+            username_password();
+           }
         }
-        else
+        else{
             printf("\n\t\t\t\t\tThe User ID or Password maybe incorrect!");
+            printf("\n\t\t\t\t\tPlease Try Again!");
+
             sleep(1);
         	system("cls");
+            username_password();
+        }
+
 }
- while(checker == 0);
 
 return 0;
 }
+
 
 
 

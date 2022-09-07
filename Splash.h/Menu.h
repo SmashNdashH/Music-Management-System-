@@ -1,8 +1,6 @@
 void menu(void)
 {
-	time_t t;
-	time(&t);
-	int Password;
+
 	char choice;
 	system("cls");
 	while(1)
@@ -12,23 +10,19 @@ void menu(void)
 		printf("\n");
 		printf("-");
 		printf("\n");
-		printf("\n                             MUSIC MANAGEMENT                         ");
+		printf("\n                             ||MUSIC MANAGEMENT||                        ");
 		printf("\n");
 		printf("\n                                 ||MENU||               ");
 		printf("\n\n                       Press  1 :  >> ADD NEW MUSIC                           ");
 		printf("\n\n                       Press  2 :  >> EDIT EXISTING MUSIC                     ");
 		printf("\n\n                       Press  3 :  >> VIEW MUSICS LIST                             ");
 		printf("\n\n                       Press  4 :  >> SEARCH MUSIC LIST                           ");
-		printf("\n\n                       Press  5 :  >> DELETE MUSIC                            ");
-		printf("\n\n                       Press  6 :  >> EXIT.                                   ");
+		printf("\n\n                       Press  5 :  >> EXIT.                                   ");
 		printf("\n\n");
 
 
-	    printf("\nCurrent date and time : %s",ctime(&t));
-
-
 		choice=getch();
-		choice=toupper(choice);
+
 		switch(choice)
 
 		{
@@ -45,19 +39,18 @@ void menu(void)
 				searchMusic();
 				break;
 			case '5':
-				deleteMusic();
-				break;
-			case '6':
 				system("cls");
-				printf("\n\n                      :-)  THANK YOU !!                                     ");
-				Sleep(2000);
+				printf("\n\n                            THANK YOU FOR USING THIS SERVICE!                            ");
+                printf("\n");
+				sleep(20);
 				exit(0);
 				break;
 			default:
  				system("cls");
-				printf("INVALID KEYWORD. \NPLEASE ENTER A VALID KEYWORD TO CHOOSE. ");
+				printf("INVALID KEYWORD.\nPLEASE ENTER A VALID KEYWORD TO CHOOSE.");
 				printf("\nPRESS ANY KEY TO CONTINUE..........");
 				getch();
+				system("cls");
 		}
 	}
 }
