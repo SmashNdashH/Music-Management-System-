@@ -1,65 +1,72 @@
-#include <stdio.h>
-#include <string.h>
-
-int main (void)
-
+void username_password(void);
+void login(void)
 {
-printf("\t\t\t\t_______________________________\n");
-printf("\t\t\t\t|********* LOG  IN ***********|\n");
-printf("\t\t\t\t|_____________________________|\n");
-char id[50];
-
-User:
-
-printf("\n\n\t\t\t\Please Enter Your id:");
-
-scanf("%s", &id);
-
-if (strcmp(id,"Abrar")==0)
-
-{
-
-printf("\n\n\t\t\tId is correct\n");
+    system("color 5F");
+        username_password();
+        system("cls");
+    system("color 2F");
+        printf("\n\n\t\t\t\t\tWELCOME USER!");
+ 	    printf("\n                                                                                  ");
+		printf("\n                                                                                         ");
+		printf("\n\n\t\t\t\t\tPress any key to Continue...                                          ");
+        printf("\n                                                                                  ");
 
 }
 
-else
+void username_password(void){
 
-{
+char user[50], pass[50];
+int checker = 0;
+    printf("\n");
+	printf("\n");
+	printf("\n");
+	printf("\n                          *o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*     ");
+	printf("\n                          *                                                 *     ");
+	printf("\n                          *                                                 *     ");
+	printf("\n                          *                   WELCOME TO                    *     ");
+	printf("\n                          *                                                 *     ");
+	printf("\n                          *                | MUSIC MANAGER |                *     ");
+    printf("\n                          *                                                 *     ");
+	printf("\n                          *                                                 *     ");
+	printf("\n                          *                                                 *     ");
+	printf("\n                          *             Press ENTER to continue. .          *     ");
+	printf("\n                          *                                                 *     ");
+	printf("\n                          *o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*o*     ");
+	printf("\n\n");
 
-printf("\n\n\t\t\tYou have entered an invalid user id\nPlease enter id again\n");
+	getchar();
+	system("cls");
 
-goto User;
+do {
+            system("color 3F");
+        printf("\n\n\t\t\t\t\tPlease enter your User ID: ");
+        scanf("%s", &user);
+        printf("\t\t\t\t\tPlease enter your password: ");
+        scanf("%s", &pass);
 
+        if(strcmp(user, "Abrar")==0)
+        {
+           if(strcmp(pass, "abrar66")==0){
+            printf("\n\t\t\t\t\tYou are Logged in. ");
+            checker++;
+            sleep(1);
+           }
+           else
+            printf("\n\t\t\t\t\tThe User ID or Password maybe incorrect!");
+            sleep(1);
+            system("cls");
+        }
+        else
+            printf("\n\t\t\t\t\tThe User ID or Password maybe incorrect!");
+            sleep(1);
+        	system("cls");
 }
-
-char pass[50];
-
-pass:
-
-printf("\t\t\tPlease Enter Your Password: ");
-
-scanf("%s", &pass);
-
-if(strcmp(pass,"Abrar6677")==0)
-
-{
-
-printf("\t\t\tYou have successfully logged in into your account\n");
-
-}
-
-else
-
-{
-
-printf("\t\t\tYou have entered a wrong password\nEnter your password again\n");
-
-goto pass;
-
-}
+ while(checker == 0);
 
 return 0;
-
 }
+
+
+
+
 

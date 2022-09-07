@@ -31,7 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Database.h" />
 		<Unit filename="Login.h" />
+		<Unit filename="Menu.h" />
+		<Unit filename="Splash.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
