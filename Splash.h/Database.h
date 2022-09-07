@@ -2,14 +2,22 @@ void addnewMusic(); // create or open existing file and add new/append to old
 void viewMusic(); // create or open existing file to view
 void editMusic(); // create or open existing file and change and/ or add
 void searchMusic(); // create or open existing file and searches
+void playMusic();
 
-
+ struct Music
+{
+	char year[20];
+	char name[30];
+	char artist[30];
+    float price;
+}s;
 void database(void){
 
     addnewMusic();
     viewMusic();
     editMusic();
     searchMusic();
+    playMusic();
     return 0;
 }
 
@@ -182,4 +190,45 @@ void searchMusic()
 	}
 	getch();
 	fclose(Music);
+}
+
+void playMusic(){
+    char song;
+    FILE *Music;
+	if((Music=fopen("MusicList.txt","r"))==NULL)
+		exit(0);
+	system("cls");
+    printf("  Music's Year of Release   \t Music's Name \t     Music's Artist   \t  Music's Price\n");
+
+	while(fread(&s,sizeof(s),1,Music)==1)
+	{
+		printf("\n  %-28s   %-17s   %-18s   Tk.%.2f/-",s.year,s.name,s.artist,s.price);
+	}
+	    printf("\n");
+        printf("\n\n                       Press  1 :  >> to play FIRST MUSIC                       ");
+		printf("\n\n                       Press  2 :  >> to play SECOND MUSIC                       ");
+		printf("\n\n                       Press  3 :  >> to play THIRD MUSIC                       ");
+        song=getch();
+
+		switch(song)
+		{
+			case '1':
+				system("C:\\Users\\abrar\\Downloads\\Edge Of Seventeen.mp3");
+				break;
+			case '2':
+				system("C:\\Users\\abrar\\Downloads\\Avicii - Wake Me Up (Official Video).mp3");
+				break;
+			case '3':
+				system("C:\\Users\\abrar\\Downloads\\Chris Brown - Roses Turn Blue [HD Lyrics On Screen].mp3");
+				break;
+            default:
+ 				system("cls");
+				printf("INVALID KEYWORD.\nPLEASE ENTER A VALID KEYWORD TO CHOOSE.");
+				printf("\nPRESS ANY KEY TO CONTINUE..........");
+				getch();
+				system("cls");
+		}
+
+fclose(Music);
+getch();
 }
