@@ -8,14 +8,13 @@
 #include "Splash.h"
 #include "Login.h"
 #include "Menu.h"
-#include "Database.h"
+
 
 int main(void)
 {
    splash();
    login();
    menu();
-   database();
     return 0;
 }
 

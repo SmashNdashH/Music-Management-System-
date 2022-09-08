@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1662581168 source:d:\music management system\music-management-system-\splash.h\main.c
+1662619957 source:d:\music management system\music-management-system-\splash.h\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -10,13 +10,12 @@
 	"Splash.h"
 	"Login.h"
 	"Menu.h"
-	"Database.h"
 
-1662567752 d:\music management system\music-management-system-\splash.h\login.h
+1662589363 d:\music management system\music-management-system-\splash.h\login.h
 
 1662505211 d:\music management system\music-management-system-\splash.h\splash.h
 
-1662581036 d:\music management system\music-management-system-\splash.h\menu.h
+1662655616 d:\music management system\music-management-system-\splash.h\menu.h
 
 1662581022 d:\music management system\music-management-system-\splash.h\database.h
 
